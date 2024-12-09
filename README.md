@@ -1,3 +1,56 @@
+# Mô tả Cấu Trúc Dự Án
+
+## 1. Thư Mục và Tệp Tin
+
+### **DIV2K_train_HR** (Dataset)
+- Chứa các ảnh có độ phân giải cao (HR) trong tập huấn luyện.
+
+### **DIV2K_train_LR_bicubic** (Dataset)
+- Chứa các ảnh độ phân giải thấp (LR) đã được làm mờ (bicubic) trong tập huấn luyện.
+
+### **DIV2K_valid_HR** (Dataset)
+- Chứa các ảnh có độ phân giải cao (HR) trong tập xác thực.
+
+### **DIV2K_valid_LR_bicubic** (Dataset)
+- Chứa các ảnh độ phân giải thấp (LR) đã được làm mờ (bicubic) trong tập xác thực.
+
+### **training_plots** (Result)
+- Lưu trữ các biểu đồ liên quan đến quá trình huấn luyện mô hình như loss và các chỉ số khác.
+
+## 2. Các Tệp Python
+
+### **Main.py** (Run)
+- Tệp chính để chạy chương trình và thực hiện các bước tăng độ phân giải ảnh.
+
+### **Training.py** (Code)
+- Tệp chứa mã nguồn để huấn luyện mô hình, bao gồm các lớp và hàm cần thiết để xây dựng, huấn luyện và lưu mô hình CNN.
+
+### **Update.py** (Code)
+- Tệp có thể chứa mã để cập nhật mô hình update của Trainning.py hoặc các tính năng khác của hệ thống trong quá trình huấn luyện.
+
+### **trained_model.h5** (Code)
+- Mô hình đã được huấn luyện và lưu lại dưới định dạng `.h5` sau khi huấn luyện.
+
+### **training_history.csv** (Code)
+- Tệp CSV chứa thông tin lịch sử huấn luyện, bao gồm các giá trị loss, accuracy, precision, recall, và F1-score.
+
+## 3. Tệp Tài Liệu và Slide
+
+### **Nhom7-IT2.docx** (Word)
+- Tài liệu báo cáo hoặc mô tả chi tiết về dự án, các bước thực hiện, kết quả, v.v.
+
+### **Nhom7-IT2.pptx** (Slide)
+- Slide thuyết trình, có thể dùng để trình bày về dự án, các kết quả, và mô hình CNN.
+
+## 4. Cấu Trúc Tổng Quan
+Dự án này bao gồm các thành phần chính:
+1. **Dữ liệu** (Div2K_train_LR và HR): Dữ liệu huấn luyện và xác thực.
+2. **Mô Hình CNN**: Được xây dựng và huấn luyện để tái tạo ảnh HR từ ảnh LR.
+3. **Kết Quả và Biểu Đồ**: Bao gồm các chỉ số huấn luyện và các biểu đồ so sánh kết quả.
+4. **Tài Liệu và Báo Cáo**: Các tài liệu và slide phục vụ việc trình bày và báo cáo kết quả dự án.
+
+
+
 # **Cách thức huấn luyện:**
 
 ## 1. **Mô Hình CNN được huấn luyện thông qua các bước chi tiết sau:**
